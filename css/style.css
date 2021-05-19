@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+:root {
+	/* Primary */
+	--cyan: hsl(179, 62%, 43%);
+	--bright-yellow: hsl(71, 73%, 54%);
+
+	/* Neutral */
+	--light-gray: hsl(204, 43%, 93%);
+	--grayish-blue: hsl(218, 22%, 67%);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Karla', sans-serif;
+}
+
+/* *Utility */
+.btn {
+	display: inline-block;
+	width: 100%;
+	padding: 1rem 0;
+	border: none;
+	border-radius: 5px;
+	margin-top: 2rem;
+	color: #fff;
+	font-weight: 700;
+}
+
+.btn-primary {
+	background-color: var(--bright-yellow);
+	box-shadow: 0px 10px 10px 3px rgba(0, 0, 0, 0.1);
+}
+
+.text-lg {
+	font-size: 2rem;
+	font-weight: 700;
+}
+/* ******** */
+
+main {
+	background-color: var(--light-gray);
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+main .container {
+	max-width: 600px;
+	margin: auto;
+	background-color: #fff;
+	border-radius: 5px;
+	overflow: hidden;
+	box-shadow: 0px 10px 10px 3px rgba(0, 0, 0, 0.1);
+}
+
+main .container .box-one {
+	padding: 2rem;
+}
+
+main .container .box-one h2 {
+	color: var(--cyan);
+	margin-bottom: 1rem;
+}
+
+main .container .box-one h3 {
+	color: var(--bright-yellow);
+	margin-bottom: 0.5rem;
+}
+
+main .container .box-one p {
+	color: var(--grayish-blue);
+	line-height: 1.5;
+}
+
+main .container .box-two {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+}
+
+.box-two > div {
+	padding: 2rem;
+}
+
+.box-two > div:first-child {
+	background-color: var(--cyan);
+	color: #fff;
+}
+
+.box-two > div:nth-child(2) {
+	background-color: var(--cyan);
+	color: #fff;
+	opacity: 0.9;
+}
+
+.box-two > div:nth-child(2) > p {
+	margin-top: 1rem;
+	font-size: 0.9rem;
+	line-height: 1.4;
+	color: var(--light-gray);
+}
+
+.box-two > div:first-child > h4 {
+	display: flex;
+	align-items: center;
+	margin: 1rem 0 0.5rem 0;
+	font-weight: 400;
+}
+
+.box-two > div:first-child > p {
+	font-size: 0.9rem;
+}
+
+/* *Smartphones */
+@media (max-width: 650px) {
+	main .container {
+		width: 500px;
+	}
+}
+
+@media (max-width: 540px) {
+	main {
+		height: auto;
+		padding: 4rem 2rem;
+	}
+
+	main .container .box-two {
+		grid-template-columns: 1fr;
+	}
+}
